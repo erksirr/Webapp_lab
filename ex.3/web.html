@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiz="'X-UA-Compatible" contents="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Test Basic Bootstrap</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .carousel-item {
+
+            height: 1000px;
+            background-size: cover;
+        }
+
+        .carousel-image-1 {
+            background-image: url('https://sv1.picz.in.th/images/2023/04/18/mynY40.png');
+            background-size: cover;
+        }
+
+        .carousel-image-2 {
+            background-image: url('https://www.menhouse.net/img/ib/V5pRRd8tlw.jpg');
+            background-size: cover;
+        }
+
+        .carousel-image-3 {
+            background-image: url('https://www.menhouse.net/img/ib/5kywTcAWeW.jpg');
+            background-size: cover;
+        }
+
+
+        body {
+            background-color: black;
+            background-size: cover;
+
+
+        }
+
+        .displaytitle {
+            color: darkred;
+            font: italic bold 100px/100px Georgia, serif;
+            transform: translateY(-750%);
+        }
+
+        .titlelittle {
+            transform: translateY(-3150%);
+            font-family: Verdana;
+
+        }
+
+        .set-text {
+            font-family: 'Itim', cursive;
+            font-family: 'Kanit', sans-serif;
+            font-family: 'Prompt', sans-serif;
+            border-bottom: solid;
+            border-color: white;
+            border-width: 3.5px;
+            margin-top: 80px;
+            color: white;
+            padding: 20px;
+            font-size: 400%;
+            font-weight: bolder;
+
+
+        }
+
+        .set-img {
+            display: flex;
+            width: 307px;
+            height: 400px;
+            transform: translateX(150%);
+            border: 7px solid white;
+            border-radius: 10px;
+            padding: 5px;
+
+        }
+
+        .tobiimg2 {
+            display: flex;
+            width: 377px;
+            height: 390px;
+            transform: translateX(20%);
+            transform: translateY();
+            border: 7px solid white;
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        .top-p {
+            padding-top: 30px;
+            color: white;
+            font-family: 'Prompt', sans-serif;
+            text-align: center;
+            font-size: larger;
+            font-weight: bolder;
+
+        }
+
+        .middle-p {
+            padding-top: 10px;
+            color: white;
+            font-family: 'Prompt', sans-serif;
+            font-size: x-large;
+            font-weight: bolder;
+            border-bottom: solid;
+            border-color: white;
+            width: 20rem;
+
+        }
+
+        .bottom-p {
+            padding-top: 10px;
+            color: white;
+            font-family: 'Prompt', sans-serif;
+            font-size: larger;
+            font-weight: bolder;
+
+        }
+
+        .about {
+            background-color: darkgray;
+
+        }
+
+        .me {
+            font-family: 'Itim', cursive;
+            font-family: 'Kanit', sans-serif;
+            font-family: 'Prompt', sans-serif;
+            border-width: 3.5px;
+            color: white;
+            padding: 10px;
+            font-size: 400%;
+            font-weight: bolder;
+
+            text-align: center;
+
+        }
+
+        .me2 {
+            font-family: 'Itim', cursive;
+            font-family: 'Kanit', sans-serif;
+            font-family: 'Prompt', sans-serif;
+            border-width: 3.5px;
+            color: white;
+            padding: 10px;
+            font-size: 200%;
+            font-weight: bolder;
+
+            text-align: center;
+        }
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Kanit:wght@100&family=Prompt:wght@100&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Bootstrap JS -->
+    <!-- สร้างเมนู -->
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">MyDraw-Naruto</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"><em>Home</em></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Tobi">Tobi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Pain">Pain</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Deidara">Deidara</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Itachi">Itachi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Sasori">Sasori</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Hidan">Hidan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#About">About me</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- การสร้าง Slider -->
+    <section id="slider">
+        <div class="carousel slide" data-bs-ride="carousel" id="mySlider">
+            <ol class="carousel-indicators">
+                <button data-bs-target="#mySlider" data-bs-slide-to="0" class="active"></button>
+                <button data-bs-target="#mySlider" data-bs-slide-to="1"></button>
+                <button data-bs-target="#mySlider" data-bs-slide-to="2"></button>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item carousel-image-1 active">
+                    <div class="container">
+                        <div class="carousel-caption d-none d-sm-block">
+                            <h1 class="displaytitle">- AKATSUKI -</h1>
+                            <p class="titlelittle">It is a criminal group that is wanted all over the world. The purpose
+                                and existence of this group is a world-shaking matter.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item carousel-image-2 ">
+                    <div class="container">
+                        <div class="carousel-caption d-none d-sm-block">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item carousel-image-3 ">
+                    <div class="container">
+                        <div class="carousel-caption d-none d-sm-block">
+                            <h1 class="displaytitle">- AKATSUKI -</h1>
+                            <p class="titlelittle">It is a criminal group that is wanted all over the world. The purpose
+                                and existence of this group is a world-shaking matter.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" data-bs-target="#mySlider" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" data-bs-target="#mySlider" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- เนื้อหา -->
+    <article>
+        <!-- Tobi -->
+        <label id="Tobi">.</label>
+        <h1 class="set-text">
+            - Tobi (โทบิ) -
+        </h1><br>
+        <div class="set-img">
+            <img src="https://www.picz.in.th/image/user.mynY40"
+                alt="" class="tobiimg">
+
+        </div>
+
+        <p class='top-p'>
+            ปัจจุบัน : เสียชีวิตเนื่องจากรับการโจมตีของคางูยะเพื่อช่วยปกป้องพวกนารูโตะและคาคาชิ<br>
+
+            ชื่อจริง:อุจิวะ โอบิโตะ<br>
+
+            คู่หูในอดีต : กุรุกุรุ, เซ็ตซึ, เดอิดาระ(เสียชีวิต), อุจิวะ มาดาระ(สัมปเวสีคืนชีพ)<br>
+
+            สถานะ : สมาชิกแสงอุษา หลังจากที่นางาโตะตายได้เป็นหัวหัวหน้าแสงอุษาคนต่อไป<br>
+        <p class='middle-p'>
+            ประวัติโดยย่อ
+        </p>
+        <p class='bottom-p'>โทบิ (トビ Tobi) ตัวจริงของโทบิ นั้นคือ อุจิวะ โอบิโตะ ซึ่งใครหลายคนคิดว่าตายไปแล้ว
+            แท้จริงในสงครามครั้งที่ 3 โอบิโตะได้ถูกช่วยไว้โดย อุจิวะ มาดาระ โดยที่
+            มาดาระได้เล่าโอบิโตะว่ารอดจากการต่อสู้กับโฮคาเงะรุ่นที่1 แล้วได้ฝังร่างของเซ็ตซึ เพื่อรักษาโอบิโตะ
+            หลังจากโอบิโตะรู้ข่าวจากเซ็ตซึว่าคาคาชิกับรินตกอยู่ในอันตราย
+            โอบิโตะก็คิดจะไปช่วยแต่ว่ากลับเกิดเหตุการณ์ที่คาคาชิฆ่าริน
+            ทำให้เนตรวงแหวนที่ตาซ้ายคาคาชิเชื่อมกับเนตรวงแหวนที่ตาขวาของโอบิโตะก็ได้เบิกเนตรกระจกเงาหมื่นบุปผา
+            จนโอบิโตะคลั่งก็กำจัดนินจาของคิริงาคุเระ หลังจากรินตายก็สับสนจนตัดสินใจเลือกที่จะร่วมมือแผนเนตรจันทรา
+            มาดาระได้สอนคาถาต้องห้ามของอุจิวะและคาถาเซียน โอบิโตะก็ได้ตาซ้ายที่มาดาระ หลังจากที่มาดาระตาย
+            โดยพยายามเข้าร่วมกับแสงอุษาแต่ไม่สำเร็จหลายครั้ง และโอบิโตะได้แอบรู้เรื่องโฮคาเงะรุ่นที่4
+            กำลังจะมีลูกจากการที่คาคาชิไปพูดที่สุสานของริน โดยวันที่นารูโตะเกิด
+            โอบิโตะได้เข้าไปในฐานลับและลักพาตัวคุชินะ และเรียกคุรามะ(เก้าหาง)ออกมาจากตัวคุชินะพร้อมพาไปบุกหมู่บ้าน
+            แตโดนขัดขวางโดยโฮคาเงะรุ่นที่4แล้วหนีไป</p>
+        <br>
+
+        <!-- Pain -->
+        <label id="Pain">.</label>
+        <h1 class="set-text">
+            - Pain (เพน) -
+        </h1><br>
+        <div class="set-img">
+            <img src="https://scontent.fbkk5-4.fna.fbcdn.net/v/t1.15752-9/330139270_623080842973028_6156844972649087118_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeHTlStmxoTPhB3VbiEpuQT7xt9xG-0zKPzG33Eb7TMo_LiZKMuenWOeNaPpLrn3TDrGtrY87KKX8VRJD-E7CF98&_nc_ohc=tsIc1EZsn5oAX_ckLkR&tn=HM4KaiQgf9nCq_j5&_nc_ht=scontent.fbkk5-4.fna&oh=03_AdQTqtIyHrFxD8udl5a0-8ehuLnPxZWgUqArg2olN1gKMQ&oe=640B889D"
+                alt="" class="tobiimg">
+            <img src="https://i.pinimg.com/564x/c0/93/df/c093dfb73290d324be94d5570e2a9731.jpg" alt="" class="tobiimg2">
+        </div>
+
+        <p class='top-p'>
+            สาเหตุ : เสียชีวิตเพราะคืนชีพทุกคนในโคโนฮะที่ตายเพราะเพน <br>
+
+            สถานะ : อดีตหัวหน้าแสงอุษา<br>
+
+            คู่หูในอดีต : โคนัน<br>
+
+            หมายเหตุ : 1ในลูกศิษย์ของจิไรยะก่อนมินาโตะและนารูโตะ<br>
+        <p class='middle-p'>
+            ประวัติโดยย่อ
+        </p>
+        <p class='bottom-p'>เพน (ペイン Pain) หัวหน้าของแสงอุษา วิชาลับของเขาคือการมีร่าง 6 ร่างที่ใช้จิตเดียวกัน
+            รู้จักกันในชื่อ เพน 6วิถี (ペイン六道 Pain Rikudō) ลักษณะที่เหมือนกันคือผมสีส้ม
+            มีการเจาะเพื่อใส่แท่งแม่เหล็กในการส่งต่อจักระจำนวนมากตามร่างกาย และทุกร่างมีเนตรสังสาระ (輪廻眼 Rinnegan)
+            เชื่อกันว่าเป็นวิชาเนตรดั้งเดิมที่ถูกค้นพบในโลกนินจาเป็นวิชาแรก มีรูปร่างเป็นวงกลมซ้อนกันหลายชั้นในดวงตา
+            มีความสามารถช่วยให้ผู้ครอบครองสามารถใช้วิชานินจาได้ทุกชนิดและควบคุมจักระได้ทั้งหมด 6 ชนิด
+            และยังทำให้ร่างทั้ง 6 ใช้ทัศนะวิสัยร่วมกันในการมอง ทำให้ร่วงทั้ง 6
+            สามารถร่วมมือกันโจมตีและป้องกันการโจมตีจากศัตรู โดยร่างแต่ละร่างของเพนในปัจจุบัน
+            ล้วนเป็นนินจาที่จิไรยะเคยพบระหว่างที่เขาเดินทางไปยังที่ต่างๆ</p>
+        <br>
+        <!-- Deidara -->
+        <label id="Deidara">.</label>
+        <h1 class="set-text">
+            - Deidara (เดริดาระ) -
+        </h1><br>
+        <div class="set-img">
+            <img src="https://scontent.fbkk5-7.fna.fbcdn.net/v/t1.15752-9/327867224_721520182683838_5407945295943982196_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeFwbAaUlHxRNPaGNnmBLybtyO2lKU_jeMvI7aUpT-N4y7zQAw2XnE1mY4aEdnTd3AG1LIyc7n_vhysNiGtm0eNU&_nc_ohc=tuUQ5_MWWnwAX-SoRZr&_nc_ht=scontent.fbkk5-7.fna&oh=03_AdTUTUbHNrVltULquvbxD8ruWQZ-IHyTDFsQ9aRUKXxFTw&oe=640BA573"
+                alt="" class="tobiimg">
+            <img src="https://f.ptcdn.info/197/051/000/oq1jhzfpk69tdn233Ox-o.jpg" alt="" class="tobiimg2">
+        </div>
+
+        <p class='top-p'>
+            สาเหตุ : เสียชีวิตในการปะทะกับซาสึเกะ<br>
+
+            สถานะ : อดีตสมาชิกแสงอุษา<br>
+
+            คู่หูในอดีต : ซาโซริ, โทบิ<br>
+        <p class='middle-p'>
+            ประวัติโดยย่อ
+        </p>
+        <p class='bottom-p'>เดอิดาระ (デイダラ Deidara) นินจาที่ถอนตัวจากอิวะคะกุเระ ก่อนที่จะเข้าร่วมกับแสงอุษา
+            เดอิดาระเป็นผู้ก่อการร้ายวางระเบิดรับจ้าง ซึ่งงานของเขาดึงดูดความสนใจของเพน และได้ส่งสมาชิกแสงอุษาคนอื่น
+            มารับตัวเดอิดาระมาเป็นสมาชิกใหม่
+            แม้ว่าเดอิดาระจะปฏิเสธแต่สุดท้ายเขาก็เลือกที่จะเข้าร่วมกลุ่มหลังจากที่พ่ายแพ้ต่ออิทาจิ
+            นอกจากนี้เดอิดาระยังคงมีตั้งใจที่จะกลับมาเอาชนะอิทาจิให้ได้ในอนาคต
+            จึงได้ฝึกฝนเทคนิกพิเศษเพื่อเอาชนะวิชาลวงตาของอิทาจิไปด้วย เดิมทีเดอิดาระปรากฏตัวเป็นคู่หูของซาโซริ
+            ซึ่งมีความมาสารถทางศิลปะและเข้าใจสิ่งที่เดอิดาระนับถือ เดอิดาระจับคู่กับโทบิหลังการตายของซาโซริ
+            โดยเดอิดาระมองโทบิเหมือนกับรุ่นน้องหรือลูกศิษย์ แม้ว่านิสัยของโทบิจะทำให้เดอิดาระรำคาญ
+            แต่เดอิดาระก็ดูแลโทบิเป็นอย่างดี คอยกันโทบิออกมาจากอันตราย
+            แม้กระทั่งช่วงสุดท้ายของชีวิตเขาก็ยังระรึกขอโทษโทบิในใจ
+            (ในการระเบิดตัวตายซึ่งกินวงกว้างและอาจจะทำให้โทบิตายไปด้วยเพราะหนีไม่ทัน)</p>
+        <br>
+        <!-- Itachi -->
+        <label id="Itachi">.</label>
+        <h1 class="set-text">
+            - Itachi (อิทาจิ) -
+        </h1><br>
+        <div class="set-img">
+            <img src="https://scontent.fbkk5-5.fna.fbcdn.net/v/t1.15752-9/327963353_1385726822196522_2767538414940334886_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeE0mae1gxlVoPsvHc42464ZhDpmYPslrKSEOmZg-yWspKPeWAk67q743iMDmXXPCTRSj2KWTt60E-Ohhua-WTMz&_nc_ohc=nQPaN021jXQAX-TZOmg&_nc_ht=scontent.fbkk5-5.fna&oh=03_AdQKRPEGiMmWbWHh4elbK8UKsCY-HaQTNIT_1wtFAPqPfw&oe=640B9BF2"
+                alt="" class="tobiimg">
+            <img src="https://f.ptcdn.info/876/066/000/q0ygko4cp36ngvMcEPH7-o.jpg" alt="" class="tobiimg2">
+        </div>
+
+        <p class='top-p'>
+            สาเหตุ : เสียชีวิตในการปะทะต่อสู้กับซาซึเกะ<br>
+
+            สถานะ : อดีตสมาชิกแสงอุษา<br>
+
+            คู่หูในอดีต : โฮชิงากิ คิซาเมะ<br>
+        <p class='middle-p'>
+            ประวัติโดยย่อ
+        </p>
+        <p class='bottom-p'>อุจิวะ อิทาจิ (うちは イタチ Uchiha Itachi) เป็นนินจาที่ถอนตัวจาก โคโนฮะคะกุเระ และมีคู่หูคือ
+            โฮชิกาคิ คิซาเมะ โดยระหว่างที่เขายังอยู่ที่โคโนฮะ
+            เขาเป็นนินจาที่มีพรสววรค์และพัฒนาจนกลายเป็นนินจาที่เก่งกาจอย่างรวดเร็ว
+            และทำให้กลายเป็นคนที่เด่นและได้รับความสนใจจากคนในตระกูลเป็นอย่างมาก สัตว์อัญเชิญของอิทาจิคืออีกา
+
+            อิทาจิ เดิมเป็นนินจาในหน่วยลับของ โคโนฮะงาคุเระ และมีความเป็นอัจฉริยะสูงมากได้เข้าหน่วยตั้งแต่อายุยังน้อย
+            อิทาจิเกิดปัญหาขัดแย้งกับคนในตระกูลโดยเดิมที เขาถูกสงสัยว่าเป็นผู้สังหาร อุจิวะ ชิซุย
+            เพื่อนสนิทและเป็นญาติในตระกูลอุจิวะด้วยกัน เพื่อเบิกเนตรวงแหวนกระจกเงาหมื่นบุปผา
+            และต้องสงสัยว่าเป็นฆาตกรผู้ฆ่าล้างตระกูล ทำให้ต้องถอนตัวออกจากหมู่บ้านไปเป็นนินจาถอนตัว และเข้าร่วมกับองค์กร
+            แสงอุษาในที่สุด โดยมีเพียง ซาสึเกะ น้องชายแท้ๆเพียงคนเดียวที่รอดชีวิตจากการสังหารหมู่ในครั้งนั้น</p>
+        <br>
+        <!-- Sasori -->
+        <label id="Sasori">.</label>
+        <h1 class="set-text">
+            - Sasori (ซาโซริ) -
+        </h1><br>
+        <div class="set-img">
+            <img src="https://scontent.fbkk5-5.fna.fbcdn.net/v/t1.15752-9/329449107_517231103812768_6338296610745865977_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeFN9cdXYuezdt7TW2hhcko7Y8GF6cXgT-VjwYXpxeBP5UuBo_THbtBBfUdv_AXJRdjpZCCn-FCNpL1s1KjhB_av&_nc_ohc=Htm8bdJw9zsAX-7Yc0p&_nc_ht=scontent.fbkk5-5.fna&oh=03_AdSOKOfMymbwtiOJqe2NmYIenF3QnEyffLb12NFwWuTxVg&oe=640B9D47"
+                alt="" class="tobiimg">
+            <img src="https://pbs.twimg.com/media/CwrYf9TUsAAWcxr.jpg" alt="" class="tobiimg2">
+        </div>
+
+        <p class='top-p'>
+            สาเหตุ : เสียชีวิตในการปะทะต่อสู้ระหว่างปฏิบัติภารกิจ<br> ถูกสังหารโดยซากุระและย่าจิโย (ย่าโจ)และยอมตาย<br>
+
+            สถานะ : อดีตสมาชิกแสงอุษา<br>
+
+            คู่หูในอดีต : เดอิดาระ, โอโรจิมารุ<br>
+        <p class='middle-p'>
+            ประวัติโดยย่อ
+        </p>
+        <p class='bottom-p'>ซาโซริ (サソリ Sasori) นินจาที่ถอนตัวจากซึนะคะกุเระ ซาโซริรักย่าโจ หลังจากการตายของพ่อแม่
+            ซึ่งย่าโจเป็นผู้ที่สอนเขาทุกอย่างเกี่ยวกับการใช้คาถาเชิดหุ่นในการต่อสู้ และด้วยวิชาที่เขาได้รับนี้
+            เขาจึงสร้างหุ่นเชิดที่คล้ายพ่อแม่ของเขาออกมาเพื่อที่จะรับรู้ถึงความรักจากพวกเขา
+            แต่ว่าพวกมันก็เป็นแค่หุ่นกระบอกที่ไม่มีความรู้สึก
+            เขารู้สึกว่าเป็นความพยายามที่ล้มเหลวและหลังจากนั้นซาโซริก็ได้ทิ้งพวกมันไว้และออกจากหมู่บ้านไปเข้าร่วมกับแสงอุษา
+            และจับคู่กับโอโรจิมารุ
+            โดยเขาเป็นหนึ่งในคนที่วางแผนสังหารโอโรจิมารุภายหลังจากการถอนตัวออกจากองค์กรของโอโรจิมารุด้วย
+            ภายหลังซาโซริจับคู่กับ
+            เดอิดาระและค่อนข้างเข้าคู่ทำงานร่วมกันได้ดีกว่าแต่ก่อนเช่นการที่เดอิดาระค่อนข้างมีความนับถือในความสามารถของซาโซริ
+            แม้ว่าทั้งสองคนจะมีมุมมองของศิลปะที่แตกต่างกัน (เดอิดาระชื่นชมงานปั้นที่ถูกทำลายด้วยระเบิดในทันที
+            แต่ซาโซริชื่นชมงานสร้างหุ่นกระบอกที่คงอยู่ยาวนาน) เดอิดาระยอมรับซาโซริในฐานะอาจารย์ของเขาจนถึงวาระสุดท้าย
+            แม้ว่าซาโซริจะไม่เคยชื่นชมความคิดของเขา</p>
+        <br>
+        <!-- Hidan -->
+        <label id="Hidan">.</label>
+        <h1 class="set-text">
+            - Hidan (ฮิดัน) -
+        </h1><br>
+        <div class="set-img">
+            <img src="https://scontent.fbkk5-5.fna.fbcdn.net/v/t1.15752-9/329755830_718316523288009_2498215171653944100_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeHiO-HtNYbcCbxMfRS46sNdvHuHuW6RH3m8e4e5bpEfeboh-nthjGN1OjUYSbNM-oY6AhDu3gsYqWoL3dSWVxVz&_nc_ohc=o3nuxy34fuYAX-13dw7&_nc_ht=scontent.fbkk5-5.fna&oh=03_AdTeIT0A9v2CIIcjWERMlvugtJ_kqRICnMAoSVQB7G-0YQ&oe=640B9C54"
+                alt="" class="tobiimg">
+            <img src="https://f.ptcdn.info/364/001/000/1358534459-Hidanrende-o.png" alt="" class="tobiimg2">
+        </div>
+
+        <p class='top-p'>
+            สาเหตุ : โดนกับดักของชิกามารุแล้วนำหัวไปฝังไว้ใต้ดินแล้วปิดผนึกไว้<br>
+
+            สถานะ : อดีตสมาชิกแสงอุษา<br>
+
+            คู่หูในอดีต : คาคุสึ<br>
+        <p class='middle-p'>
+            ประวัติโดยย่อ
+        </p>
+        <p class='bottom-p'>ฮิดัน (飛段 Hidan) คู่หูปากดีของคาคุสึ ฮิดันเป็นสาวกของศาสนาจาชิน (เทพปีศาจ)
+            เป็นศาสนาที่บูชาเทพเจ้าซึ่งมีชื่อเดียวกับชื่อลัทธิ
+            และเชื่อว่าทุกสิ่งจะอยู่ภายใต้การพิพากษาลงทัณฑ์ของเทพปีศาจ โดย
+            ฮิดันจะต้องภาวนาต่อจาชินทุกครั้งก่อนที่จะเริ่มการต่อสู้
+            เพื่อขอพรสำหรับการสังหารที่ลุล่วงหรือขอการประทานอภัยหากเขาไม่ได้รับอนุญาตให้ฆ่าคู่ต่อสู้ โดยหลังจากการต่อสู้
+            ฮิดันจะทำพิธีกรรมต่ออีกเป็นเวลา 30
+            นาทีตามความเชื่อทางศาสนาและจบด้วยการแทงตัวเองที่หน้าอกขณะที่นอนอยู่กับพื้น
+            โดยเขาจะได้รับการมีชีวิตอมตะเป็นการตอบแทน ฮิดันสามารถรอดชีวิตจากการบาดเจ็บสาหัสได้แม้กระทั่งถูกตัดหัวก็ตาม
+            (แต่ถึงจะรอดชีวิตก็ต้องมีการเย็บเชื่อมต่อมันกลับเข้าหากันเพื่อกลับมาใช้ร่างกายตามปกติ)
+            โดยคาคุสึจะใช้ความสามารถในการช่วยต่อชิ้นส่วนที่ขาดจากกันให้และทำให้บาดแผลของเขารักษาได้ทันเวลา
+            การที่ฮิดันมีชีวิตอมตะนั้นก็เป็นประโยชน์ต่อคาคุสึเช่นกัน
+            เพราะคาคุสึนั้นมักจะอารมณ์ไม่มั่นคงและอาจสังหารคู่หูได้โดยง่าย
+            แต่กับฮิดันเขาสามารถโจมตีฮิดันได้เท่าที่เขาต้องการโดยไม่ต้องกังวลว่าคู่หูจะตาย
+            ถึงแม้ว่าทั้งคู่จะไม่ชอบทำงานร่วมกันและมีปากเสียงกันเสมอ
+            แต่จากความสามารถเหล่านี้ก็ทำให้พวกเขากลายเป็นทีมในอุดมคติเลยทีเดียว</p>
+        <br>
+    </article>
+
+    <section id="About" class="about">
+        <!-- about -->
+        <div class="dark overlay">
+            <div class="row">
+                <div class="column">
+                    <h1 class="me">เกี่ยวกับเรา</h1>
+                    <h2 class="me2">นายสิรภพ แสงมี<br>
+                        64010893
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+</html>

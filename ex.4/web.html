@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <div id="maincontainer"></div>
+    <script>
+        const main = document.getElementById("maincontainer");
+
+        const title = document.createElement("h1");
+        title.innerText = 'Exercise 04: JavaScript&DOM';
+        main.appendChild(title);
+
+        const button = document.createElement('button');
+        button.innerText = 'Click me to display Date and Time'
+        button.addEventListener('click', Time)
+
+
+        button.style.top = 0 + 'px';
+        button.style.right = 0 + 'px';
+
+        main.appendChild(button);
+
+        let get;
+        function Time() {
+            if (get == undefined) {
+                get = new Worker('web1.js');
+                button.style.position = 'fixed'
+                get.onmessage = function (e) 
+                {
+                    button.innerText = e.data['time'];
+                    console.log(e.data['number'])
+                    if (e.data['number'] % 6 == 0) {
+                        button.style.color = "#FFF000"
+                        button.style.backgroundColor = "#FF0000"
+                    }
+                    if (e.data['number'] % 6 == 1) {
+                        button.style.color = "#000000"
+                        button.style.backgroundColor = "#FBC000"
+                    }
+                    if (e.data['number'] % 6 == 2) {
+                        button.style.color = "#FFCCBC"
+                        button.style.backgroundColor = "#FB5000"
+                    }
+                    if (e.data['number'] % 6 == 3) {
+                        button.style.color = "#FFF0BC"
+                        button.style.backgroundColor = "#FF00BC"
+                    }
+                    if (e.data['number'] % 6 == 4) {
+                        button.style.color = "#FFFFFC"
+                        button.style.backgroundColor = "#299438"
+                    }
+                    if (e.data['number'] % 6 == 5) {
+                        button.style.color = "#FFFF5C"
+                        button.style.backgroundColor = "#FF325C"
+                    }
+                    if (e.data['number'] % 6 == 6) {
+                        button.style.color = "#FFFFCC"
+                        button.style.backgroundColor = "#FFDB5C"
+                    }
+                }
+            }
+            else {
+                button.style.position = 'static'
+                get.terminate();
+                get = undefined;
+            }
+        }
+
+        const info = document.createElement('p');
+        const perInfo = document.createElement('a');
+        perInfo.setAttribute('href', '#')
+        perInfo.style.color = '#929EE8'
+        perInfo.style.backgroundColor = '#FFFFFF'
+        perInfo.addEventListener('mouseover', mouse => {
+            perInfo.style.color = '#0000FF'
+            perInfo.style.backgroundColor = '#C3F6EA'
+        })
+        perInfo.addEventListener('mouseout', mouse => {
+            perInfo.style.color = '#929EE8'
+            perInfo.style.backgroundColor = '#FFFFFF'
+        })
+        perInfo.innerText = 'Personal Info';
+        perInfo.addEventListener('click', Info)
+        info.appendChild(perInfo);
+        main.appendChild(info);
+
+        const divInfo = document.createElement('div');
+        main.appendChild(divInfo);
+
+        const snapShots = document.createElement('h2');
+        snapShots.innerText = 'Snapshots';
+        main.appendChild(snapShots);
+
+        const groups = document.createElement('ul');
+        const fireWork = document.createElement('li');
+        const fireLink = document.createElement('a');
+        fireLink.setAttribute('href', '#')
+        fireLink.addEventListener('click', event => {
+            pic.setAttribute('src', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9bSLkh-pdSYA_nFaWsILPGIAqznBsRlpFcA&usqp=CAU')
+        })
+        fireLink.innerText = 'Fireworks';
+        fireWork.appendChild(fireLink);
+        groups.appendChild(fireWork);
+
+        const crest = document.createElement('li');
+        const crestLink = document.createElement('a');
+        crestLink.setAttribute('href', '#')
+        crestLink.addEventListener('click', event => {
+            pic.setAttribute('src', 'https://img.freepik.com/premium-vector/lion-king-line-art-luxury-logo-template_74472-461.jpg?size=338&ext=jpg&ga=GA1.2.1397951171.1677227245&semt=sph')
+        })
+        crestLink.innerText = 'Crest';
+        crest.appendChild(crestLink);
+        groups.appendChild(crest);
+
+        const action = document.createElement('li');
+        const actionLink = document.createElement('a');
+        actionLink.setAttribute('href', '#')
+        actionLink.addEventListener('click', event => {
+            pic.setAttribute('src', 'https://img.freepik.com/premium-photo/man-runner-start-running-road_34152-1432.jpg?w=1060')
+        })
+        actionLink.innerText = 'Action';
+        action.appendChild(actionLink);
+        groups.appendChild(action);
+
+        const buff = document.createElement('li');
+        const buffLink = document.createElement('a');
+        buffLink.setAttribute('href', '#')
+        buffLink.addEventListener('click', event => {
+            pic.setAttribute('src', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRULM--6I9z67_3a3ovoIXsPHWh-4lMJzNzmD9fbMidWYbbsL7FwTb3F67Nmsz0n8b-4wQ&usqp=CAU')
+        })
+        buffLink.innerText = 'Buffalo';
+        buff.appendChild(buffLink);
+        groups.appendChild(buff);
+
+        main.appendChild(groups);
+
+        const pic = document.createElement('img');
+        pic.setAttribute('src', 'https://www.wallpapers13.com/wp-content/uploads/2017/02/Characters-Looney-Tunes-Baby-Tweety-Daffy-Duck-Bugs-Bunny-Sylvester-the-Cat-and-Tasmanian-Devil-full-HD-Wallpapers-1920x1200-1920x1200.jpg');
+        pic.setAttribute('width', '500');
+        main.appendChild(pic);
+
+        function Info() {
+            if (divInfo.innerHTML == '') {
+                const groupInfo = document.createElement('ul');
+                const name = document.createElement('li');
+                name.innerText = 'Siraphop Sangmee of student, ID: 64010893';
+                groupInfo.appendChild(name);
+
+                const sub = document.createElement('li');
+                sub.innerText = 'Subject:Web Application Development';
+                groupInfo.appendChild(sub);
+
+                const semester = document.createElement('li');
+                semester.innerText = 'Semester2';
+                groupInfo.appendChild(semester);
+
+                divInfo.appendChild(groupInfo);
+            }
+            else {
+                divInfo.innerHTML = '';
+            }
+        }
+    </script>
+</body>
+
+</html>
